@@ -1,38 +1,176 @@
-.App {
-  text-align: center;
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --darkgrey: hsl(0, 0%, 55%);
+  --vdarkgrey: hsl(0, 0%, 41%);
+}
+html {
+  font-size: 1rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "Josefin Sans";
+}
+.pint-cup {
+  outline: 1px solid tomato;
+}
+.outline-none {
+  border: 0 !important;
+  background: transparent;
+  outline: 0 !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Navigation Section */
+nav {
+  background: transparent !important;
+  font-family: "Alata", sans-serif;
+}
+ul {
+  font-size: 18px;
+}
+hr {
+  visibility: hidden;
+  background: rgba(255, 255, 255, 0.9);
+  width: 20px !important;
+  margin: 0;
+  padding: 1px 0;
+}
+
+li:hover hr {
+  visibility: visible;
+  transition: 0.5s;
+}
+/* Navigation Section */
+
+/* Hero Section */
+.hero {
+  background: url("./desktop/image-hero.jpg");
+  position: relative;
+}
+
+.card {
+  border: 2px solid white !important;
+  border-radius: 0px !important;
+  font-size: 4rem !important;
+  font-weight: 300;
+}
+
+/* Hero Section */
+
+/* Event */
+.event {
+  position: relative;
+}
+
+.lead {
+  font-size: 1.2rem !important;
+}
+/* Event */
+
+/* Creation */
+
+.creation .btn {
+  letter-spacing: 2px;
+  border-radius: 0 !important;
+}
+
+.item h2 {
+  position: absolute;
+  left: 15% !important;
+  z-index: 1;
+}
+.item:hover h2 {
+  color: #292b2c !important;
+}
+.item:hover > img {
+  opacity: 0.4;
+  filter: grayscale(30%);
+  cursor: pointer;
+}
+
+/* Creation */
+
+.footer {
+  background-color: #232323;
+}
+
+@media (max-width: 560px) {
+  .hero .card {
+    font-size: 1.86rem !important;
+  }
+
+  h1,
+  h2 {
+    font-size: 1.5rem !important;
+  }
+  h2 {
+    bottom: 30% !important;
+    /* left: 50%; */
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media (min-width: 990px) {
+  .event .card {
+    position: absolute;
+    right: 10%;
+    bottom: -10%;
+  }
+  .item h2 {
+    bottom: 15%;
+    left: 15% !important;
+    z-index: 1;
+  }
+  .event img {
+    margin-left: 1rem;
+  }
 }
 
-.App-link {
-  color: #61dafb;
-}
+@media (max-width: 990px) {
+  /* Hero Section */
+  .hero {
+    background-image: url("./mobile/image-hero.jpg") !important;
+  }
+  .item img,
+  .footer img.logo {
+    width: 100%;
+  }
+  .footer .icons img {
+    width: 50%;
+  }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  /* Hero Section */
+
+  /* Navigation Section */
+  ul.me-auto {
+    background: #232323;
+    text-transform: uppercase;
+    font-family: "Josefin Sans" !important;
+    font-weight: 300;
+    font-size: 30px;
+    padding: 0 1rem;
+    height: 90vh;
   }
-  to {
-    transform: rotate(360deg);
+  hr {
+    visibility: hidden;
   }
+  /* Navigation Section */
+
+  /*  Events Section */
+  h1.pb-3 {
+    font-size: 2rem;
+  }
+  /*  Events Section */
+  /* Creation */
+  .item h2 {
+    bottom: 20% !important;
+    left: 10% !important;
+    /* z-index: 1; */
+  }
+
+  /* Creation */
 }

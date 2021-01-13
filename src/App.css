@@ -27,7 +27,7 @@ body {
 
 /* Navigation Section */
 nav {
-  background: transparent !important;
+  background: rgba(0, 0, 0, 0.4) !important;
   font-family: "Alata", sans-serif;
 }
 ul {

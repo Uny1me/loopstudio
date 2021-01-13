@@ -40,7 +40,7 @@ class Nav extends Component {
         return (
             <div>
 
-                <nav className="fixed-top navbar navbar-dark navbar-expand-lg col-12 pt-4" style={{ background: this.state.isCollapsed ? '#232323' : 'transparent' }}>
+                <nav className="fixed-top navbar navbar-dark navbar-expand-lg col-12 pt-4 pb-4" style={{ background: this.state.isCollapsed ? '#232323' : 'transparent' }}>
 
                     <div className="container-fluid col-10">
 
